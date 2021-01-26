@@ -9,6 +9,13 @@ body {
     padding: 0;
 }
 
+h1,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 img {
     max-width: 100%;
 }
@@ -17,7 +24,52 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+}
+
 /* =======================
-    General typography
+        Typography
 ==========================*/
 
+
+
+
+/* =======================
+        Layout
+==========================*/
+.container {
+    display: grid;
+    grid-template-columns: 2em 1fr 2em;
+    grid-template-areas: 
+        ". navbar ."
+        ". text ."
+        ". img .";
+}
+
+.navbar { grid-area: navbar }
+.hero__text { grid-area: text }
+.hero__img { grid-area: img }
+
+
+/* navbar */
+
+.navbar { 
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__list { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__link__logo { 
+    width: 30px;
+}
+
+.navbar__list__li  + .navbar__list__li{
+    margin-left: 1em;
+}
