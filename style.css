@@ -33,6 +33,13 @@ ul {
 ==========================*/
 
 
+/* cta */
+.cta { 
+    background: black;
+    color: white;
+    padding: .5em .75em;
+    border: 1px solid white;
+}
 
 
 /* =======================
@@ -41,21 +48,20 @@ ul {
 .container {
     display: grid;
     grid-template-columns: 2em 1fr 2em;
-    grid-template-areas: 
-        ". navbar ."
-        ". text ."
-        ". img .";
+
 }
 
-.navbar { grid-area: navbar }
-.hero__text { grid-area: text }
-.hero__img { grid-area: img }
+.container > * {
+    grid-column: 2 / 3;
+}
+
 
 
 /* navbar */
 
 .navbar { 
-    padding: 1em 0;
+    padding-top: 1em;
+    margin-bottom: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,4 +78,10 @@ ul {
 
 .navbar__list__li  + .navbar__list__li{
     margin-left: 1em;
+}
+
+/* hero */
+.hero__text {
+    display: grid;
+    grid-gap: .85em;
 }
