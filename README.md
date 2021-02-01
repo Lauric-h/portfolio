@@ -10,6 +10,7 @@
 - [] Write content : text, picture, links
 - [] CSS for mobile
 - [] Desktop version
+- [] Animations
 - [] Deployment
 ***
 ## Languages 
