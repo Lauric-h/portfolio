@@ -27,6 +27,11 @@ img {
     max-width: 100%;
 }
 
+img,
+svg {
+    z-index: 1000;
+}
+
 a {
     text-decoration: none;
 }
@@ -34,6 +39,8 @@ a {
 ul {
     list-style: none;
 }
+
+
 
 /* =======================
         Typography
@@ -148,22 +155,46 @@ i {
     margin-left: 1em;
 }
 
+footer .navbar {
+    display: grid;
+    
+}
+
+.footer__text {
+    grid-row: 3 / 4;
+}
+
+
 .footer__text { justify-self: center; }
 
 /* hero */
 .hero__container {
+    max-width: 900px;
     display: grid;
     grid-gap: 1.5em;
     padding-bottom: 2em;
 }
 
+
+
 .hero__text {
     display: grid;
     grid-gap: 1em;
+    max-width: 400px;
 }
 
 .hero__img {
     justify-self: center;
+}
+
+@media (min-width: 800px) {
+    .hero__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero__img {
+        grid-column: 2 / -1;
+        align-self: center;
+    }
 }
 
 /* blocks */ 
