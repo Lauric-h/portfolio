@@ -66,7 +66,6 @@ h2::after {
     width: 100%;
 }
 
-
 /* cta */
 .cta { 
     color: white;
@@ -132,9 +131,18 @@ i {
 }
 
 
-/* navbar */
+.navbar,
+.hero__container,
+.block {
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* navbar & footer */
 .navbar { 
-    margin: 2em 0 1em 0;
+    margin: 2em auto 1em auto;
     display: grid;
     align-items: center;
     grid-gap: .85em;
@@ -157,47 +165,28 @@ i {
 
 footer .navbar {
     display: grid;
-    
 }
 
 .footer__text {
     grid-row: 3 / 4;
 }
 
-
 .footer__text { justify-self: center; }
 
 /* hero */
 .hero__container {
-    max-width: 900px;
     display: grid;
     grid-gap: 1.5em;
     padding-bottom: 2em;
-    margin: 0 auto;
 }
 
 .hero__text {
     display: grid;
     grid-gap: 1em;
-    max-width: 400px;
 }
 
 .hero__img {
     justify-self: center;
-}
-
-@media (min-width: 800px) {
-    .container {
-        grid-template-columns: 20% 1fr 20%;
-        justify-content: center;
-    }
-    .hero__container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .hero__img {
-        grid-column: 2 / -1;
-        align-self: center;
-    }
 }
 
 /* blocks */ 
@@ -219,10 +208,75 @@ footer .navbar {
     text-align: center;
 }
 
+.block{
+    width: 100%;
+    grid-template-columns: 1fr;
+}
 
-/* background */
+.block > * {
+    grid-column: 1 / -1;
+}
+
+/* =======================
+        MEDIA QUERIES
+==========================*/
+
+@media (min-width: 800px) {
+    .navbar,
+    .hero__container {
+        max-width: 900px;
+    }
+    .navbar {
+        margin: 3em auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .navbar__list {
+        justify-self: left;
+    }
+    .nav__link{
+        justify-self: right;
+    }
+    .hero__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero__img {
+        grid-column: 2 / -1;
+        align-self: center;
+        justify-self: right;
+    }
+    .footer__text {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 900px) {
+    footer .navbar {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr) ;
+    }
+    .footer__text {
+        grid-row: 1;
+        grid-column: 2 / 3;
+    }
+}
+
+@media (min-width: 1300px) {
+    body {
+        font-size: 1.5rem;
+    }
+    .navbar,
+    .hero__container {
+        max-width: 1200px;
+    }
+}
+
+
+/* =======================
+        BACKGROUND
+==========================*/
+
 body {
-    background: #1b2735;
+    background: radial-gradient(ellipse at top, #1B2735 0%, #090A0F 100%)
 }
 
 .hero {
