@@ -58,9 +58,9 @@ h2::after {
     content: "";
     display: block;
     position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
+    /* bottom: -5px; */
+    /* left: 0; */
+    /* right: 0; */
     height: 1px;
     background: #afc2e8;
     width: 100%;
@@ -263,14 +263,13 @@ footer .navbar {
         justify-self: right;
     }
     .block {
-        width: 100;
+        width: 100%;
+        max-width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1;
+        grid-template-rows: 1;  
     }
-    .block--technos {
-        
-    }
+
     .block--technos__text {
         grid-column: 2 / -1;
     }
@@ -279,6 +278,8 @@ footer .navbar {
         grid-column: 1;
         grid-row: 1;
     }
+
+   
     
     .footer__text {
         grid-column: 1 / -1;
