@@ -7,7 +7,7 @@
 body {
     margin: 0;
     padding: 0;
-    color: white;
+    color: #F6F7EB;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -68,16 +68,17 @@ h2::after {
 
 /* cta */
 .cta { 
-    color: white;
+    color: #F6F7EB;
     padding: .5em .75em;
     border: 1px solid #afc2e8;
+    border-radius: 5px;
     text-align: center;
     text-transform: uppercase;
 }
 
 /* hero */
 .hero__text {
-    color: white;
+    color: #F6F7EB;
 }
 
 .hero__img {
@@ -108,6 +109,21 @@ h2::after {
     font-weight: 700;
 }
 
+/* card */
+.card {
+    max-width: 400px;
+    margin: 1em auto;
+    padding: 1.5em;
+    background-color:#F6F7EB;
+    color: #1B2735;
+    border-radius: 5px;
+    justify-self: center;
+}
+
+.card--secondary {
+    background-color: #fff;
+}
+
 /* footer */
 i {
     color: red;
@@ -129,7 +145,6 @@ i {
 .container > * {
     grid-column: 2 / 3;
 }
-
 
 .navbar,
 .hero__container,
@@ -172,7 +187,6 @@ footer .navbar {
     text-align: center;
 }
 
-
 /* hero */
 .hero__container {
     display: grid;
@@ -208,13 +222,19 @@ footer .navbar {
     text-align: center;
 }
 
-/* .block{
-    grid-template-columns: 1fr;
-} */
+/* card */
+.card {
+    display: grid;
+    grid-column-gap: 2em;
+    grid-template-areas: 
+        "img"
+        "title"
+        "body";
+}
 
-/* .block > * {
-    grid-column: 1 / -1;
-} */
+.card__img { grid-area: img; }
+.card__title { grid-area: title; }
+.card__text { grid-area: body;}
 
 /* =======================
         HOVER STATES
@@ -252,7 +272,8 @@ footer .navbar {
         justify-self: right;
     }
     .hero__container,
-    .navbar {
+    .navbar,
+    .card {
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
         max-width: 900px;
@@ -279,7 +300,21 @@ footer .navbar {
         grid-row: 1;
     }
 
-   
+    .card {
+        padding: 2em;
+        grid-template-areas: 
+        "img title"
+        "img body";
+    }
+    .card--secondary {
+        grid-template-areas: 
+        "title img "
+        "body img ";
+    }
+
+    .card__img {
+        align-self: center;
+    }
     
     .footer__text {
         grid-column: 1 / -1;
@@ -303,7 +338,7 @@ footer .navbar {
     }
     .navbar,
     .hero__container,
-    .block {
+    .card {
         max-width: 1200px;
     }
 }
