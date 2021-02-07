@@ -1,17 +1,17 @@
 # Welcome to my single page portfolio 
 
 ## Goal 
-=> Just having a simple landing page 
+=> Simple landing page 
 ***  
 ## Steps
 => Started on the 25/01/2021
 => Mobile-first approach
 - [X] Design on Figma
-- [] Write content : text, picture, links
-- [] CSS for mobile
-- [] Desktop version
-- [] Animations
-- [] Deployment
+- [X] Write content : text, picture, links
+- [X] CSS for mobile
+- [X] Desktop version
+- [X] Animations
+
 ***
 ## Languages 
 - HTML 
