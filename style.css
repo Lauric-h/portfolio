@@ -157,12 +157,6 @@ h2::after {
   color: #1B2735;
 }
 
-.projects__link:active,
-.projects__link:hover {
-  color: #afc2e8;
-}
-
-
 /* logos */ 
 .card__text__logo {
     width: 30px;
@@ -312,15 +306,24 @@ footer .navbar {
 .nav__link__logo {
     transition: all .5s ease;
 }
+
+.projects__link:active,
+.projects__link:hover {
+  color: #afc2e8;
+}
+
 .cards__card,
-.card {
+.card,
+.projects {
     transition : all .5s ease;
 }
 
 .cards__card:active,
 .cards__card:hover,
 .card:active,  
-.card:hover {
+.card:hover,
+.projects:active,
+.projects:hover {
     transform: scale(1.05);
 }
 
